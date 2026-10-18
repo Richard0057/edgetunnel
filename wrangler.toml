@@ -1,8 +1,18 @@
-name = "v20251104"
+name = "edgetunnel"
 main = "_worker.js"
 compatibility_date = "2025-11-04"
 keep_vars = true
 
-#[[kv_namespaces]]
-#binding = "KV"			#KV绑定名默认不可修改
-#id = ""				#KV数据库id
+[observability]
+enabled = true
+head_sampling_rate = 1
+
+[observability.logs]
+enabled = true
+invocation_logs = true
+persist = true
+head_sampling_rate = 1
+
+[[kv_namespaces]]
+binding = "KV"
+id = "a689e700a0a34c178722a3f88471952e"
